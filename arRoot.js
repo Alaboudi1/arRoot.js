@@ -36,5 +36,3 @@ function root(word) {
     root = removeSimilarConsecutiveLetters(root);
     return root.join('');
 }
-
-console.log(root("رجاجيل"));
