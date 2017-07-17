@@ -25,6 +25,7 @@ function root(word) {
         }
         if (isVowel(letters[i + 1]) && isVowel(letters[i + 2])) {
             root.push(letters[i + 1]);
+            i = i + 2;
             continue;
         }
         if (isVowel(letters[i + 1])) {
@@ -36,3 +37,4 @@ function root(word) {
     return root.join('');
 }
 
+console.log(root("رجاجيل"));
