@@ -19,12 +19,11 @@ function root(word) {
     const letters = word.split('');
     let root = [];
     for (let i = 0; i < letters.length; i++) {
-        const letter = letters[i]
-        if (!isVowel(letter)) {
-            root.push(letter)
+        if (!isVowel(letters[i])) {
+            root.push(letters[i])
             continue;
         }
-        if (isVowel(letters[i + 1] && isVowel(letters[i + 2]))) {
+        if (isVowel(letters[i + 1]) && isVowel(letters[i + 2])) {
             root.push(letters[i + 1]);
             continue;
         }
@@ -36,3 +35,5 @@ function root(word) {
     root = removeSimilarConsecutiveLetters(root);
     return root.join('');
 }
+
+console.log(root("قطاوة"))
