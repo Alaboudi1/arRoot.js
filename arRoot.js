@@ -36,4 +36,3 @@ function root(word) {
     return root.join('');
 }
 
-console.log(root("قطاوة"))
